@@ -11,7 +11,7 @@ def guess_num(x):
             guess = random.randint(low,high)
         feedback = input("Is {0} too high(h), too low(l), or correct (c)?".format(guess)).lower()
         if feedback == 'h':
-            high = guess -1
+            high = guess - 1
             print("Please guess again!")
         elif feedback == 'l':
             low = guess + 1
