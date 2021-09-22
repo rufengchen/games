@@ -55,10 +55,3 @@ while True:
     else:
         print("Thank you for using our quiz! Bye")
         break
-# WK3 1.5
-# Password validation
-while True:
-    password = input("Please enter password: ")
-    if len(password)>=6 and password.isalnum():
-        print("Password set successfully")
-        break
