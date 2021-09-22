@@ -76,3 +76,15 @@ for row in faculty:
         email_list.append(new_row)  # add the row into the email_list
         print(email_list)
 faculty2.close()
+
+
+# Wk 3 1.7
+# Reading csv files
+# 1.7.1)
+fruit1 = open('fruit_list.csv','r')
+new_list = []
+for item in fruit1:
+    if 'grapes' in item:
+        new_list.append(item.rstrip('\n')) # add the infor to the new list and remove '\n'
+print(new_list)
+fruit1.close()
