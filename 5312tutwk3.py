@@ -55,3 +55,24 @@ while True:
     else:
         print("Thank you for using our quiz! Bye")
         break
+# Wk3 1.6
+# reading txt files
+# 1.6.1)  display the last row in the given file
+faculty1 = open('faculty.txt','r') # 'r' means for reading
+for row_1 in faculty:
+    pass
+print(row_1.rstrip())
+faculty1.close() # for files we need to open the file and close the file
+# pass: you want loop to cycle through the sequence and do nothing
+
+# Wk3 1.6.2)
+# find all the emails in the file and save to a list email_list
+# print out all the emails
+faculty2 = open('faculty.txt','r') # 'r' means for reading
+for row in faculty:
+    email_list = []
+    if '@' in row:
+        new_row = row.lstrip('Email: ').rstrip('\n') # remove 'Email:' on the left and '\n' on the right side
+        email_list.append(new_row)  # add the row into the email_list
+        print(email_list)
+faculty2.close()
