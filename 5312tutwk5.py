@@ -24,3 +24,33 @@ for i in range(0,len(statelist1)):
     statelist1[i].replace('\n','')
     print(statelist1[i])
 statefile1.close()
+
+
+# Exercise 2: list comprehension and sorting with lambda function
+names = ['Yuqi Lan','Marilyn Leung','Chenyu Zhang','Wing Sze Wong']
+setLN =set()
+for name in names:
+    setLN.add(name.split()[-1])
+print(setLN)
+
+
+# Exercise 2: list comprehension and sorting with lambda function
+# 2.1 use list comprehesion
+names1 = ['Yuqi Lan','Marilyn Leung','Chenyu Zhang','Wing Sze Wong']
+setLN1 = [lname1.split()[-1] for lname1 in names1]
+print(setLN1)
+
+
+# Exercise 2: list comprehension and sorting with lambda function
+# 2.2 use lambda sort the name by last name
+names2 = ['Yuqi Lan','Marilyn Leung','Chenyu Zhang','Wing Sze Wong']
+setLN2 = [lname.split()[-1] for lname in names2]
+names2.sort(key=lambda x: x.split()[-1])
+print(names2)
+
+# Another method:
+def y(x):
+    return x.split()[-1]
+names3 = ['Yuqi Lan','Marilyn Leung','Chenyu Zhang','Wing Sze Wong']
+names3.sort(key=y)# the key is the function name(no need parameters)
+print(names3)
